@@ -1,0 +1,32 @@
+﻿@model DataModel
+@{
+}
+@* Using css/bootstrap I built a basic table layout, 2 x 3 with a border. Put some padding to give the text some breathing room to improve the look. This is responsive and readable at smaller window sizes.  *@
+<div style="border: 3px groove black;">
+        <div class="row" style="padding-left: 10px;">
+            <div class="col-6">
+                <h1>@Model.Question1</h1>
+            </div>
+            <div class="col-6">
+                <p>@Model.Answer1</p>
+            </div>
+        </div>
+            <hr />
+        <div class="row" style="padding-left: 10px;">
+            <div class="col-6">
+                <h1>@Model.Question2</h1>
+            </div>
+            <div class="col-6">
+                <p>@Model.Answer2</p>
+            </div>
+        </div>
+            <hr />
+        <div class="row" style="padding-left: 10px;">
+            <div class="col-6">
+                <h1>@Model.Question3</h1>
+            </div>
+            <div class="col-6">
+                <p>@Model.Answer3</p>
+            </div>
+        </div>
+</div>

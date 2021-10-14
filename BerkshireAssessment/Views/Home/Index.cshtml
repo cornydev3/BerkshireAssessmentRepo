@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome Berkshire Team</h1>
+    @* Setup a simple button to act as the catalyst to load the data into the view *@
+    <input type="button" id="a1" value="Click To Load Responses" />
+</div>
+<br />
+@* This is a basic container for the view to be loaded in *@
+<div id="a2">
+
+</div>
+@* Bringing in the jquery scripts needed to run ajax/jquery *@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+
+</script>
+<script>
+    $(document).ready(function () {
+        //-- This is a simple click handler. In this case its to fire off the GetResponses method from the Home controller. --//
+        $("#a1").click(function () { $("#a2").load('@Url.Action("GetResponses", "Home")'); })
+    });
+</script>
